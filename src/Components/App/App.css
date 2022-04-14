@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: grid;
+  grid-template-columns: 150px 7fr;
+  height: 100vh;
 }
 
 .App-header {
@@ -26,6 +18,16 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Navigation {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.Main {
+  grid-column-start: 2;
+  grid-column-end: 6;
 }
 
 @keyframes App-logo-spin {
