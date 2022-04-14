@@ -10,6 +10,7 @@
     margin: 0px;
     padding: 5px;
     display: block;
+    text-align: left;
 }
 
 .UserList li a {
@@ -27,4 +28,9 @@
   .UserList li#selected {
     background-color: rgb(236, 235, 235);
     color: white;
+  }
+
+  .UserList h4 {
+    text-align: left;
+    text-decoration: underline;
   }

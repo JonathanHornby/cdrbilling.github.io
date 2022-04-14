@@ -1,5 +1,10 @@
 import React from 'react';
-import './Navigation.css'
+import './Navigation.css';
+import people from './pictures/people.png';
+import building from './pictures/building.png';
+import cells from './pictures/cells.png'
+import chart from './pictures/chart.png'
+import logout from './pictures/logout.png'
 
 
 // Vertical navigation pane
@@ -12,13 +17,14 @@ class Navigation extends React.Component {
     }
 
     handleViewChange(e) {
-        this.props.changeView(e.target.innerHTML);
+        //this.props.changeView(e.target.innerHTML);
+        this.props.changeView(e.target.title);
+        console.log("Id: ");
+        console.log(e.target.title);
     }
 
     componentDidUpdate(prevProps) {
-        console.log("In did update");
         if(this.props.selected !== prevProps.selected) {
-            console.log("In did update TRUE");
             this.render();
         }
     }
@@ -27,10 +33,22 @@ class Navigation extends React.Component {
         return (
             <div className='Navigation'>
                     <ul>
+                        <li title='Customers' id={this.props.selected==="Customers" ? "selected" : "option"} onClick={this.handleViewChange}>
+                            <img src={building} width="30" title="Customers" alt="People icons created by SBTS2018 - Flaticon" /></li>
+                        <li title="Users" id={this.props.selected==="Users" ? "selected" : "option"} onClick={this.handleViewChange}>
+                            <img src={people} width="30" title="Users" alt="People icons created by SBTS2018 - Flaticon" /> </li>
+                        <li title="Records" id={this.props.selected==="Records" ? "selected" : "option"} onClick={this.handleViewChange}>
+                            <img src={cells} width="30" title="Records" alt="People icons created by SBTS2018 - Flaticon" /> </li>
+                        <li title="Reports" id={this.props.selected==="Reports" ? "selected" : "option"} onClick={this.handleViewChange}>
+                            <img src={chart} width="30" title="Reports" alt="People icons created by SBTS2018 - Flaticon" /> </li>
+                        <li><img src={logout} width="30" title="Logout" alt="People icons created by SBTS2018 - Flaticon"  onClick={this.handleViewChange}/> </li>
+                        {/*
                         <li id={this.props.selected==="Customers" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Customers</a></li>
                         <li id={this.props.selected==="Users" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Users</a></li>
+                        <li id={this.props.selected==="Records" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Records</a></li>
                         <li id={this.props.selected==="Reports" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Reports</a></li>
                         <li><a href="#">Logout</a></li>
+                        */}
                     </ul>
             </div>
         )

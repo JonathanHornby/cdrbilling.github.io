@@ -1,6 +1,7 @@
 import React from 'react';
 import './UserList.css';
 import User from '../User/User';
+import SearchBar from '../../SearchBar/SearchBar';
 
 // UserList
 
@@ -14,7 +15,8 @@ class UserList extends React.Component {
         return (
             <div className='UserList'>
                 <ul>
-                    <li>Users</li>
+                    <li><h4>Users</h4></li>
+                    <li><SearchBar /></li>
                     {this.props.users.map(user => {
                         return <li className='option'><User name={user.name} /></li>
                     })}

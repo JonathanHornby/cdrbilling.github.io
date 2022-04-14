@@ -10,6 +10,7 @@
     margin: 0px;
     padding: 5px;
     display: block;
+    text-align: left;
 }
 
 .CustomerList li a {
@@ -27,4 +28,9 @@
   .CustomerList li#selected {
     background-color: rgb(236, 235, 235);
     color: white;
+  }
+
+  .CustomerList h4 {
+    text-align: left;
+    text-decoration: underline;
   }
