@@ -1,6 +1,7 @@
 .MainWindow {
     text-align: center;
     display: grid;
+
     grid-template-columns: 200px 5fr;
     grid-template-rows: 1fr;  
   }
@@ -15,6 +16,7 @@
 
   .MainRight {
     border-left: 1px solid rgb(192, 192, 192);
+    border-top: 1px solid rgb(192, 192, 192);
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;

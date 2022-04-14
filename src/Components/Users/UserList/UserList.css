@@ -1,30 +1,30 @@
-.CustomerList ul {
+.UserList ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
     background-color: rgb(255, 255, 255);
   }
 
-  .CustomerList li {
+  .UserList li {
     border-top: 1px solid rgb(192, 192, 192);
     margin: 0px;
     padding: 5px;
     display: block;
 }
 
-.CustomerList li a {
+.UserList li a {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
   }
 
-  .CustomerList li.option:hover {
+  .UserList li.option:hover {
     background-color: rgb(218, 218, 218);
     color: white;
   }
 
-  .CustomerList li#selected {
+  .UserList li#selected {
     background-color: rgb(236, 235, 235);
     color: white;
   }

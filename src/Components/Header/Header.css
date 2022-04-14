@@ -1,0 +1,38 @@
+.Header {
+    background-color: rgb(255, 255, 255);
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr; 
+    align-items: center;  
+  }
+
+.HeaderLeft {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    }
+
+.HeaderLeft img {
+    margin: auto;
+    height: 80px;
+}
+
+.HeaderRight {
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+  
+  }
+
+.HeaderRight h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(23, 31, 139);
+}

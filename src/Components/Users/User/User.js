@@ -1,20 +1,20 @@
 import React from 'react';
-import './Customer.css';
+import './User.css';
 
-// Customer
+// User
 
-class Customer extends React.Component {
+class User extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div className='Customer'>
+            <div className='User'>
                 {this.props.name}
             </div>
         )
     }
 }
 
-export default Customer;
+export default User;
