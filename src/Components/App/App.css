@@ -2,7 +2,9 @@
   text-align: center;
   display: grid;
   grid-template-columns: 150px 7fr;
+  grid-template-rows: 40px 7fr;
   height: 100vh;
+
 }
 
 .App-header {
@@ -20,14 +22,32 @@
   color: #61dafb;
 }
 
+.Header {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(192, 192, 192);
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 8;
+
+}
+
 .Navigation {
-  grid-column-start: 1;
-  grid-column-end: 1;
+    height: 100%;
+    width: auto;
+    border: 1px solid rgb(192, 192, 192);
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
 }
 
 .Main {
+  background-color: rgb(255, 255, 255);
+  grid-row-start: 2;
+  grid-row-end: 8;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 8;
 }
 
 @keyframes App-logo-spin {
