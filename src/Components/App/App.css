@@ -27,7 +27,7 @@
   border: 1px solid rgb(192, 192, 192);
   grid-row-start: 1;
   grid-row-end: 1;
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 8;
 
 }
@@ -35,7 +35,7 @@
 .Navigation {
     height: 100%;
     width: auto;
-    border: 1px solid rgb(192, 192, 192);
+    border-right: 1px solid rgb(192, 192, 192);
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -45,8 +45,18 @@
 .Main {
   background-color: rgb(255, 255, 255);
   grid-row-start: 2;
-  grid-row-end: 8;
+  grid-row-end: 7;
   grid-column-start: 2;
+  grid-column-end: 8;
+}
+
+.Footer {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(192, 192, 192);
+  height: 40px;
+  grid-row-start: 8;
+  grid-row-end: 8;
+  grid-column-start: 1;
   grid-column-end: 8;
 }
 

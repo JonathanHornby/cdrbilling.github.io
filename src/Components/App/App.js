@@ -5,6 +5,7 @@ import './App.css';
 import Main from '../Main/Main'
 import Header from '../Header/Header'
 import Navigation from '../Navigation/Navigation'
+import Footer from '../Footer/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Navigation />
           <Header />
           <Main />
+          <Footer />
       </div>
     );
   }
