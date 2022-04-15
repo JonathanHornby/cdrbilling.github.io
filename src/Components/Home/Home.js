@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './Home.css';
 
 // Home
@@ -11,7 +10,7 @@ class Home extends React.Component {
         return (
             <div className="Home">
                 <div className='homecontent'>
-                    <h3>Welcome to my interview project react application</h3>
+                    <h3>Welcome to my interview project - React application</h3>
                     <p>This is a React recreation of a PHP/MySQL application I wrote in 2009 for the company I was working for at the time. I have written this
                          from scratch in the evenings from 14th to 18th April 2022 for the purpose of my interview.</p>
                     <p><b>Context of the application:</b> The company supplies post paid mobile sim cards to businesses who assign the sim cards to use for work phone calls.
@@ -21,11 +20,11 @@ class Home extends React.Component {
                         data for analysis of calling patterns and to pick up on any abuse by it's users.</p>
                     <p>A customer is a business which pays for it's users to make phone calls. </p>
                     <p>a user is a staff member at a specific customer who has a sim card allocated to them and makes phone calls from it.</p>
-                    <p><b>Skills: </b></p>
-                    <p>I have tried to demonstrate a range of skills, including:</p>
+                    <p><b>Skills: </b>I have tried to demonstrate a range of skills, including:</p>
                     <div className='SkillsList'>
                         <ul>
                             <li>HTML</li>
+                            <li>Responsive</li>
                             <li>CSS</li>
                             <li>Javascript</li>
                             <li>React</li>

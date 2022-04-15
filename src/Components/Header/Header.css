@@ -1,39 +1,52 @@
 .Header {
-    background-color: rgb(255, 255, 255);
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 8;
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: auto 1fr; 
-    align-items: center; 
-    border-bottom: 1px solid rgb(192, 192, 192);
-  }
+  background-color: rgb(255, 255, 255);
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-rows: auto 1fr; 
+  align-items: center; 
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
 
 .HeaderLeft {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    }
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
 
 .HeaderLeft img {
-    margin: auto;
-    height: 80px;
+  margin: auto;
+  height: 80px;
+}
+
+.HeaderCenter {
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.HeaderCenter h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+  color: rgb(23, 31, 139);
 }
 
 .HeaderRight {
-    align-items: center;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  
-  }
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
 
-.HeaderRight h1 {
-    font-family:'Times New Roman', Times, serif;
-    font-style: italic;
-    color: rgb(23, 31, 139);
+.HeaderRight img {
+  margin: auto;
+  height: 30px;
+  padding-right: 20px;
 }
