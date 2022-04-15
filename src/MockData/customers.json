@@ -1,0 +1,6 @@
+[{"id":"1","name":"Customer 1","numberusers":"2","numbersimcards":"2","averev":"123","address":"Customer 1 address","contactname":"Customer 1 Name","contactphone":"Customer 1 phone","contactemail":"Customer 1 email"},
+{"id":"2","name":"Customer 2","numberusers":"1","numbersimcards":"1","averev":"234","address":"Customer 2 address","contactname":"Customer 2 Name","contactphone":"Customer 2 phone","contactemail":"Customer 2 email"},
+{"id":"3","name":"Customer 3","numberusers":"1","numbersimcards":"1","averev":"345","address":"Customer 3 address","contactname":"Customer 3 Name","contactphone":"Customer 3 phone","contactemail":"Customer 3 email"},
+{"id":"4","name":"Customer 4","numberusers":"1","numbersimcards":"1","averev":"456","address":"Customer 4 address","contactname":"Customer 4 Name","contactphone":"Customer 4 phone","contactemail":"Customer 4 email"},
+{"id":"5","name":"Customer 5","numberusers":"0","numbersimcards":"0","averev":"0","address":"Customer 5 address","contactname":"Customer 5 Name","contactphone":"Customer 5 phone","contactemail":"Customer 5 email"}
+]

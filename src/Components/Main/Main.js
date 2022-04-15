@@ -41,9 +41,15 @@ class Main extends React.Component {
         } else if (this.props.view === 'Customers') {
             mainLeft = <NavList customerList={this.state.customerList} view={view} />
             mainRight = <ContentWindow view={view} customerId={this.customerId} />
-        } else {
+        } else if (this.props.view === 'Users') {
             mainLeft = <NavList userList={this.state.userList} view={view} />
             mainRight = <ContentWindow view={view} userId={this.userId}/>
+        } else if (this.props.view === 'Records') {
+            mainLeft = <NavList view={view} />
+            mainRight = <ContentWindow view={view} />
+        } else if (this.props.view === 'Reports') {
+            mainLeft = <NavList view={view} />
+            mainRight = <ContentWindow view={view} />
         }
 
 

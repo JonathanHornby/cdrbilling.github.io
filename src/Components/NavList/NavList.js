@@ -41,6 +41,16 @@ class NavList extends React.Component {
                     </ul>
                 </div>
             )
+        } else if(view === 'Records') {
+            return (
+                <div className='NavList borderdiv'>
+                    <ul>
+                        <li><p>Records</p></li>
+                        <li><SearchBar /></li>
+
+                    </ul>
+                </div>
+            )
         } else if(view === 'Reports') {
             return (
                 <div className='NavList borderdiv'>

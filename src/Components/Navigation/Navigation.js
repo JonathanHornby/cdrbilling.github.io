@@ -20,8 +20,6 @@ class Navigation extends React.Component {
     handleViewChange(e) {
         //this.props.changeView(e.target.innerHTML);
         this.props.changeView(e.target.title);
-        console.log("Id: ");
-        console.log(e.target.title);
     }
 
     componentDidUpdate(prevProps) {
@@ -31,20 +29,21 @@ class Navigation extends React.Component {
     }
 
     render() {
+        let alt = "People icons created by SBTS2018 - Flaticon";
         return (
             <div className='Navigation'>
                     <ul>
                         <li title='Home' id={this.props.selected==="Home" ? "selected" : "option"} onClick={this.handleViewChange}>
-                            <img src={home} width="30" title="Home" alt="People icons created by SBTS2018 - Flaticon" /></li>
+                            <img src={home} width="30" title="Home" alt={alt} /></li>
                         <li title='Customers' id={this.props.selected==="Customers" ? "selected" : "option"} onClick={this.handleViewChange}>
-                            <img src={building} width="30" title="Customers" alt="People icons created by SBTS2018 - Flaticon" /></li>
+                            <img src={building} width="30" title="Customers" alt={alt} /></li>
                         <li title="Users" id={this.props.selected==="Users" ? "selected" : "option"} onClick={this.handleViewChange}>
-                            <img src={people} width="30" title="Users" alt="People icons created by SBTS2018 - Flaticon" /> </li>
+                            <img src={people} width="30" title="Users" alt={alt} /> </li>
                         <li title="Records" id={this.props.selected==="Records" ? "selected" : "option"} onClick={this.handleViewChange}>
-                            <img src={cells} width="30" title="Records" alt="People icons created by SBTS2018 - Flaticon" /> </li>
+                            <img src={cells} width="30" title="Records" alt={alt} /> </li>
                         <li title="Reports" id={this.props.selected==="Reports" ? "selected" : "option"} onClick={this.handleViewChange}>
-                            <img src={chart} width="30" title="Reports" alt="People icons created by SBTS2018 - Flaticon" /> </li>
-                        <li><img src={logout} width="30" title="Logout" alt="People icons created by SBTS2018 - Flaticon"  onClick={this.handleViewChange}/> </li>
+                            <img src={chart} width="30" title="Reports" alt={alt} /> </li>
+                        <li><img src={logout} width="30" title="Logout" alt={alt}  onClick={this.handleViewChange}/> </li>
                         {/*
                         <li id={this.props.selected==="Customers" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Customers</a></li>
                         <li id={this.props.selected==="Users" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Users</a></li>
