@@ -11,14 +11,22 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            customers: [
+            customerList: [
                 {id: '1', name: 'Customer 1'},
                 {id: '2', name: 'Customer 2'},
+                {id: '1', name: 'Customer 1'},
+                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
+                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
+                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
+                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
+                {id: '2', name: 'Customer 2'},
                 {id: '3', name: 'Customer 3'}],
-            users: [
+            userList: [
                 {id: '1', name: 'User 1'},
                 {id: '2', name: 'User 2'},
-                {id: '3', name: 'User 3'}]
+                {id: '3', name: 'User 3'}],
+            customerId: "2",
+            userId: "3"
         }
     }
 
@@ -31,11 +39,11 @@ class Main extends React.Component {
             mainLeft = '';
             mainRight = <Home />;
         } else if (this.props.view === 'Customers') {
-            mainLeft = <NavList customers={this.state.customers} view={view} />
-            mainRight = <ContentWindow view={view} />
+            mainLeft = <NavList customerList={this.state.customerList} view={view} />
+            mainRight = <ContentWindow view={view} customerId={this.customerId} />
         } else {
-            mainLeft = <NavList users={this.state.users} view={view} />
-            mainRight = <ContentWindow view={view} />
+            mainLeft = <NavList userList={this.state.userList} view={view} />
+            mainRight = <ContentWindow view={view} userId={this.userId}/>
         }
 
 

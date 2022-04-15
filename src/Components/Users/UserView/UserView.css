@@ -1,23 +1,62 @@
 .UserView {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 25% 75%; 
-    align-items: center; 
-  }
-  
-  .UserViewHead {
-    align-items: center;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-  
-  .UserViewDisplay {
-    align-items: center;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-  
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1fr 75%; 
+  align-items: center; 
+}
+
+.UserViewDiv {
+  background-color: rgb(245, 249, 255);
+}
+
+.UserViewHead {
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 50% 50%;
+}
+
+.UserViewDisplay {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.UserHeadTable {
+  margin: 10px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-align: left;
+  font-size: 1.2vw;
+  background-color: rgb(255, 255, 255);
+  height: 90%;
+}
+
+.UserHeadGraph {
+  margin-right: 10px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  text-align: left;
+  font-size: 1.2vw;
+  background-color: rgb(255, 255, 255);
+  height: 90%;
+}
+
+.graphimage {
+    object-fit: cover;
+}
+
+.UserHeadTable table,  th, td {
+  padding: 5px;
+  padding-right: 50px;
+}

@@ -38,6 +38,7 @@ class Home extends React.Component {
                             <li></li>
                         </ul>
                     </div>
+                    <p>Please browse the Navigation menu on the left</p>
                 </div>
             </div>
         )

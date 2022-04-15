@@ -1,14 +1,14 @@
 import React from 'react';
 import './CustomerView.css';
-import graphexample from './pictures/graphexample.png';
+import RevenueGraph from '../../RevenueGraph/RevenueGraph';
 
 // CustomerView
+
+// CustomerView and UserView should actually extend a generalized View component
 
 class CustomerView extends React.Component {
     constructor(props) {
         super(props);
-    
-
     }
 
     customer = {
@@ -17,6 +17,10 @@ class CustomerView extends React.Component {
         numberusers: "8",
         numbersimcards: "8",
         averev: "345",
+        address: "Customer 1 address",
+        contactname: "customer 1 contact name",
+        contactphone: "customer 1 contact phone",
+        contactemail: "customer 1 contact email"
     }
 
     render() {
@@ -32,17 +36,17 @@ class CustomerView extends React.Component {
                         </table>
                     </div>
                     <div className="CustomerHeadGraph borderdiv">
-                        <img className="graphimage" src={graphexample}></img>
+                        <RevenueGraph />
                     </div>
                 </div>
 
                 <div className="CustomerViewDisplay borderdiv">
                     <table>
                         <tr><td span="2"><h4>Customer Information</h4></td></tr>
-                        <tr><td>Customer address:</td><td>Example customer address</td><td>Data field 4: </td><td>Info 4</td></tr>
-                        <tr><td>Contact Name:</td><td>{this.customer.name}</td><td>Data field 5: </td><td>Info 5</td></tr>
-                        <tr><td>Contact Phone:</td><td>{this.customer.name}</td><td>Data field 6: </td><td>Info 6</td></tr>
-                        <tr><td>Contact Email:</td><td>{this.customer.name}</td><td>Data field 7: </td><td>Info 7</td></tr>
+                        <tr><td>Customer address:</td><td>{this.customer.address}</td><td>Data field 4: </td><td>Info 4</td></tr>
+                        <tr><td>Contact Name:</td><td>{this.customer.contactname}</td><td>Data field 5: </td><td>Info 5</td></tr>
+                        <tr><td>Contact Phone:</td><td>{this.customer.contactphone}</td><td>Data field 6: </td><td>Info 6</td></tr>
+                        <tr><td>Contact Email:</td><td>{this.customer.contactemail}</td><td>Data field 7: </td><td>Info 7</td></tr>
                         <tr><td>Data field 1: </td><td>Info 1</td><td>Data field 7: </td><td>Info 8</td></tr>
                         <tr><td>Data field 2: </td><td>Info 2</td><td>Data field 8: </td><td>Info 9</td></tr>
                         <tr><td>Data field 3: </td><td>Info 3</td><td>Data field 9: </td><td>Info 10</td></tr>

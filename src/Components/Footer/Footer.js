@@ -10,10 +10,10 @@ class Footer extends React.Component {
         return (
             <div className="Footer">
                 <div className='FooterLeft'>
-                    <p>Footer Left</p>
+                    <p>Created by Jonathan Hornby 2022</p>
                 </div>
                 <div className='FooterRight'>
-                    <p>Footer Right</p>
+                    <p><a href="mailto:jtorn9@gmail.com">Contact me</a></p>
                 </div>
             </div>
         )

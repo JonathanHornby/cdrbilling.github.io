@@ -1,5 +1,7 @@
 .NavList {
   margin: 10px;
+  overflow-x: scroll;
+  height: 97%;
 }
 
 .NavList ul {
@@ -26,13 +28,13 @@
 }
 
 .NavList li.option:hover {
-    background-color: rgb(218, 218, 218);
-    color: white;
+  background-color: rgb(96, 151, 233);
+  color: white;
 }
 
 .NavList li#selected {
-    background-color: rgb(236, 235, 235);
-    color: white;
+  background-color: rgb(236, 235, 235);
+  color: white;
 }
 
 .NavList p {

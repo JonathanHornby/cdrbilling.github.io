@@ -23,7 +23,7 @@ class NavList extends React.Component {
                     <ul>
                         <li><p>Customers</p></li>
                         <li><SearchBar /></li>
-                        {this.props.customers.map(customer => {
+                        {this.props.customerList.map(customer => {
                             return <li className='option'><Customer name={customer.name} id={customer.id} /></li>
                         })}
                     </ul>
@@ -35,7 +35,7 @@ class NavList extends React.Component {
                     <ul>
                         <li><p>Users</p></li>
                         <li><SearchBar /></li>
-                        {this.props.users.map(user => {
+                        {this.props.userList.map(user => {
                             return <li className='option'><User name={user.name} id={user.id} /></li>
                         })}
                     </ul>
