@@ -5,6 +5,7 @@ import building from './pictures/building.png';
 import cells from './pictures/cells.png'
 import chart from './pictures/chart.png'
 import logout from './pictures/logout.png'
+import home from './pictures/home.png'
 
 
 // Vertical navigation pane
@@ -33,6 +34,8 @@ class Navigation extends React.Component {
         return (
             <div className='Navigation'>
                     <ul>
+                        <li title='Home' id={this.props.selected==="Home" ? "selected" : "option"} onClick={this.handleViewChange}>
+                            <img src={home} width="30" title="Home" alt="People icons created by SBTS2018 - Flaticon" /></li>
                         <li title='Customers' id={this.props.selected==="Customers" ? "selected" : "option"} onClick={this.handleViewChange}>
                             <img src={building} width="30" title="Customers" alt="People icons created by SBTS2018 - Flaticon" /></li>
                         <li title="Users" id={this.props.selected==="Users" ? "selected" : "option"} onClick={this.handleViewChange}>

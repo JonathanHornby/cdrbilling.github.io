@@ -1,0 +1,16 @@
+.Home h3, p {
+    text-align: left;
+}
+
+.Home .homecontent {
+    width: 50%;
+}
+
+.Home .SkillsList {
+    width: 100px;
+}
+
+.Home li {
+    list-style-type: none;
+    text-align: left;
+}

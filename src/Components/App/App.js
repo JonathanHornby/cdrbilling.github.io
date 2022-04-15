@@ -1,10 +1,11 @@
 import React from 'react';
 
 import './App.css';
-import Main from '../Main/Main'
-import Header from '../Header/Header'
-import Navigation from '../Navigation/Navigation'
-import Footer from '../Footer/Footer'
+import Main from '../Main/Main';
+import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
+
 
 
 class App extends React.Component {
@@ -24,14 +25,14 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
-          <Navigation selected={this.state.view} changeView={this.changeView} />
-          <Header />
-          <Main view={this.state.view} />
-          <Footer />
-      </div>
-    );
+      return (
+        <div className="App">
+            <Navigation selected={this.state.view} changeView={this.changeView} />
+            <Header />
+            <Main view={this.state.view} />
+            <Footer />
+        </div>
+      );
   }
 }
 
