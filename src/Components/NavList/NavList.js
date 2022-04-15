@@ -13,7 +13,6 @@ class NavList extends React.Component {
     }
 
 
-
     render() {
 
         let view = this.props.view;
