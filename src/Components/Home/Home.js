@@ -22,17 +22,21 @@ class Home extends React.Component {
                     <p>A customer is a business which pays for it's users to make phone calls. </p>
                     <p>a user is a staff member at a specific customer who has a sim card allocated to them and makes phone calls from it.</p>
                     <p><b>Skills: </b></p>
-                    <p>I have tried to demonstrate a broad range of skills in the application, including:</p>
+                    <p>I have tried to demonstrate a range of skills, including:</p>
                     <div className='SkillsList'>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Javascript</li>
                             <li>React</li>
+                            <li>Stateless/Stateful</li>
                             <li>Rest</li>
                             <li>Async</li>
                             <li>JSX</li>
                             <li>Json</li>
+                            <li>Git</li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>

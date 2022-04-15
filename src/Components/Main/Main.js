@@ -1,9 +1,8 @@
 import React from 'react';
 import './Main.css';
-import CustomerList from '../Customers/CustomerList/CustomerList';
-import UserList from '../Users/UserList/UserList';
 import NavList from '../NavList/NavList';
 import Home from '../Home/Home';
+import ContentWindow from '../ContentWindow/ContentWindow';
 
 // Main component acts as a container for the components which will display tabulated data in the window
 
@@ -26,15 +25,16 @@ class Main extends React.Component {
     render() {
         let mainLeft = '';
         let mainRight = '';
+        let view = this.props.view;
 
         if(this.props.view === 'Home') {
             mainLeft = '';
             mainRight = <Home />;
         } else if (this.props.view === 'Customers') {
-            mainLeft = <CustomerList customers={this.state.customers} />
-            mainRight = "Test main right"
+            mainLeft = <NavList customers={this.state.customers} view={view} />
+            mainRight = <ContentWindow view={view} />
         } else {
-            mainLeft = <UserList users={this.state.users} />
+            mainLeft = <NavList users={this.state.users} view={view} />
             mainRight = "Test main right"
         }
 
