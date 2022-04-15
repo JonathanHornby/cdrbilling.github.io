@@ -20,7 +20,7 @@ class NavList extends React.Component {
         
         if(view === 'Customers') {
             return (
-                <div className='NavList'>
+                <div className='NavList borderdiv'>
                     <ul>
                         <li><p>Customers</p></li>
                         <li><SearchBar /></li>
@@ -32,7 +32,7 @@ class NavList extends React.Component {
             )
         } else if(view === 'Users') {
             return (
-                <div className='NavList'>
+                <div className='NavList borderdiv'>
                     <ul>
                         <li><p>Users</p></li>
                         <li><SearchBar /></li>
@@ -44,7 +44,7 @@ class NavList extends React.Component {
             )
         } else if(view === 'Reports') {
             return (
-                <div className='NavList'>
+                <div className='NavList borderdiv'>
                     <ul>
                         <li><p>Reports</p></li>
                         <li><SearchBar /></li>

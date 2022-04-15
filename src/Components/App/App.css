@@ -4,10 +4,12 @@
   grid-template-columns: 70px 7fr;
   grid-template-rows: 80px 7fr;
   height: 100vh;
+  color: rgb(65, 82, 107);
+  font-family:'Times New Roman', Times, serif;
+  font-size: large;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,8 +22,6 @@
 .App-link {
   color: #61dafb;
 }
-
-
 
 .Navigation {
     height: 100%;
@@ -41,6 +41,11 @@
   grid-column-end: 8;
 }
 
+.borderdiv {
+  border-bottom: 1px solid rgb(192, 192, 192);
+  border-radius: 10px;
+  border-style: ridge;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -1,0 +1,62 @@
+.CustomerView {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1fr 75%; 
+    align-items: center; 
+  }
+
+  .CustomerViewDiv {
+    background-color: rgb(234, 242, 253);
+  }
+  
+  .CustomerViewHead {
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 50% 50%;
+  }
+  
+  .CustomerViewDisplay {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+  }
+  
+  .CustomerHeadTable {
+    margin: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: left;
+    font-size: 1.2vw;
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+  }
+
+  .CustomerHeadGraph {
+    margin-right: 10px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: left;
+    font-size: 1.2vw;
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+  }
+
+  .graphimage {
+      object-fit: cover;
+  }
+
+  .CustomerHeadTable table,  th, td {
+    padding: 5px;
+    padding-right: 50px;
+  }

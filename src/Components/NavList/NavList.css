@@ -1,8 +1,13 @@
+.NavList {
+  margin: 10px;
+}
+
 .NavList ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(255, 255, 255);
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+    
 }
 
 .NavList li {

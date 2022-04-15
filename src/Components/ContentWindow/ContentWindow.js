@@ -1,5 +1,7 @@
 import React from 'react';
 import './ContentWindow.css';
+import CustomerView from '../Customers/CustomerView/CustomerView';
+import UserView from '../Users/UserView/UserView';
 
 // ContentWindow
 
@@ -10,9 +12,18 @@ class ContentWindow extends React.Component {
     }
 
     render() {
+
+        let display = '';
+        let view = this.props.view;
+        if(view === 'Customers') {
+            display = <CustomerView />
+        } else if(view === 'Users') {
+            display = <UserView />
+        }
+
         return (
             <div className="ContentWindow">
-                {this.props.view}
+                {display}
             </div>
         )
     }

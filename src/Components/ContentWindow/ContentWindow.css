@@ -1,0 +1,6 @@
+.ContentWindow {
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+}

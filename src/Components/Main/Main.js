@@ -35,8 +35,9 @@ class Main extends React.Component {
             mainRight = <ContentWindow view={view} />
         } else {
             mainLeft = <NavList users={this.state.users} view={view} />
-            mainRight = "Test main right"
+            mainRight = <ContentWindow view={view} />
         }
+
 
         return (
 

@@ -1,0 +1,23 @@
+.UserView {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 25% 75%; 
+    align-items: center; 
+  }
+  
+  .UserViewHead {
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  
+  .UserViewDisplay {
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  

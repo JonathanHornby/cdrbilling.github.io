@@ -8,12 +8,12 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="Home">
+            <div className="Home borderdiv">
                 <div className='homecontent'>
                     <h3>Welcome to my interview project - React application</h3>
                     <p>This is a React recreation of a PHP/MySQL application I wrote in 2009 for the company I was working for at the time. I have written this
                          from scratch in the evenings from 14th to 18th April 2022 for the purpose of my interview.</p>
-                    <p><b>Context of the application:</b> The company supplies post paid mobile sim cards to businesses who assign the sim cards to use for work phone calls.
+                    <p><b>Context of the application:</b> The company supplies post paid mobile sim cards to businesses who assign the sim cards to users to make work phone calls.
                         The company charges for all phone calls made from the sim cards on a per second basis.
                         The company needs to invoice customers each month for the correct amount based on the phone calls made by it's users for the month. </p>
                     <p>Each business customer needs a breakdown of the total spend of each of it's users for each period, and needs to be able to view reports and
