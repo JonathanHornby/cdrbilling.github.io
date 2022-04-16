@@ -14,12 +14,6 @@ class Main extends React.Component {
             customerList: [
                 {id: '1', name: 'Customer 1'},
                 {id: '2', name: 'Customer 2'},
-                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},
                 {id: '3', name: 'Customer 3'}],
             userList: [
                 {id: '1', name: 'User 1'},
@@ -28,6 +22,12 @@ class Main extends React.Component {
             customerId: "2",
             userId: "3"
         }
+
+        this.changeCustomer = this.changeCustomer.bind(this);
+    }
+
+    changeCustomer(id) {
+        this.setState({customerId: id});
     }
 
     render() {
@@ -39,8 +39,8 @@ class Main extends React.Component {
             mainLeft = '';
             mainRight = <Home />;
         } else if (this.props.view === 'Customers') {
-            mainLeft = <NavList customerList={this.state.customerList} view={view} />
-            mainRight = <ContentWindow view={view} customerId={this.customerId} />
+            mainLeft = <NavList customerList={this.state.customerList} view={view} customerChange={this.changeCustomer} />
+            mainRight = <ContentWindow view={view} customerId={this.state.customerId} />
         } else if (this.props.view === 'Users') {
             mainLeft = <NavList userList={this.state.userList} view={view} />
             mainRight = <ContentWindow view={view} userId={this.userId}/>
