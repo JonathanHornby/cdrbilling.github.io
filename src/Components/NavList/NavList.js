@@ -22,9 +22,9 @@ class NavList extends React.Component {
                 <div className='NavList borderdiv'>
                     <ul>
                         <li><p>Customers</p></li>
-                        <li><SearchBar /></li>
+                        <li><SearchBar type="Customer"/></li>
                         {this.props.customerList.map(customer => {
-                            return <li className='option'><Customer name={customer.name} id={customer.id} /></li>
+                            return <li className='option'><Customer name={customer.name} id={customer.id} customerChange={this.props.customerChange} /></li>
                         })}
                     </ul>
                 </div>

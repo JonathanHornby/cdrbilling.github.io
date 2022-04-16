@@ -10,7 +10,7 @@ class Customer extends React.Component {
 
     render() {
         return (
-            <div className='Customer'>
+            <div className='Customer' id={this.props.id} onClick={this.props.customerChange} >
                 {this.props.name}
             </div>
         )

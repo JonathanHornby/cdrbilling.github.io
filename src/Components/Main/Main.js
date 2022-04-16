@@ -20,15 +20,39 @@ class Main extends React.Component {
                 {id: '2', name: 'User 2'},
                 {id: '3', name: 'User 3'}],
             customerId: "2",
-            userId: "3"
+            userId: "3",
+            customer: "",
+            user: ""
         }
 
         this.changeCustomer = this.changeCustomer.bind(this);
+        this.getCustomerData();
     }
 
-    changeCustomer(id) {
-        this.setState({customerId: id});
+    changeCustomer(e) {
+        this.setState({customerId: e.target.id});
     }
+
+    handleSearch(e) {
+        console.log("In handleSearch: ");
+    }
+
+    async getCustomerData(id = this.state.customerId){
+        const response = await fetch('./customers.json',{
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+             }
+        });
+        const data = await response.json();
+        const customer = data.find(item => item.id === id);
+        console.log("Customer: " + customer)
+        this.setState({"customer": customer});
+     }
+
+     componentDidUpdate() {
+         this.getCustomerData();
+     }
 
     render() {
         let mainLeft = '';
@@ -40,7 +64,7 @@ class Main extends React.Component {
             mainRight = <Home />;
         } else if (this.props.view === 'Customers') {
             mainLeft = <NavList customerList={this.state.customerList} view={view} customerChange={this.changeCustomer} />
-            mainRight = <ContentWindow view={view} customerId={this.state.customerId} />
+            mainRight = <ContentWindow view={view} customer={this.state.customer} />
         } else if (this.props.view === 'Users') {
             mainLeft = <NavList userList={this.state.userList} view={view} />
             mainRight = <ContentWindow view={view} userId={this.userId}/>
