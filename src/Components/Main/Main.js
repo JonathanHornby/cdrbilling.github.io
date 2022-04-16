@@ -11,47 +11,83 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            customerList: [
-                {id: '1', name: 'Customer 1'},
-                {id: '2', name: 'Customer 2'},
-                {id: '3', name: 'Customer 3'}],
-            userList: [
-                {id: '1', name: 'User 1'},
-                {id: '2', name: 'User 2'},
-                {id: '3', name: 'User 3'}],
+            customerList: [],
+            customerNavList: [],
+            userNavList: [],
+            userList: [],
             customerId: "2",
-            userId: "3",
+            userId: "625aa3149b7bd6be98524d11",
             customer: "",
-            user: ""
+            user: "",
         }
 
         this.changeCustomer = this.changeCustomer.bind(this);
-        this.getCustomerData();
+        this.handleSearch = this.handleSearch.bind(this);
+        this.getCustomerData('customer', this.state.customerId);
+        this.getCustomerData('user', this.state.userId);
     }
 
-    changeCustomer(e) {
-        this.setState({customerId: e.target.id});
+    changeCustomer(e, type = 'Customer') {
+        if(type === 'Customer') {
+            this.setState({customerId: e.target.id});
+        } else if(type === 'User') {
+            this.setState({userId: e.target.id});
+        }
     }
 
-    handleSearch(e) {
-        console.log("In handleSearch: ");
+    handleSearch(e, type) {
+        if(type === 'CustomerSearch') {
+            const regex = new RegExp(e.target.value, 'i')
+            const custArray = this.state.customerList.filter((customer) => { return customer.name.match(regex)});
+            this.setState({customerNavList: custArray})
+        } else if(type === 'UserSearch') {
+            const regex = new RegExp(e.target.value, 'i')
+            const userArray = this.state.userList.filter((user) => { return user.name.match(regex)});
+            this.setState({userNavList: userArray})
+        }
     }
 
-    async getCustomerData(id = this.state.customerId){
-        const response = await fetch('./customers.json',{
-            headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-             }
-        });
-        const data = await response.json();
-        const customer = data.find(item => item.id === id);
-        console.log("Customer: " + customer)
-        this.setState({"customer": customer});
+    // This should be API calls to fetch data from Database, but we are just using local .json files instead during development
+    async getCustomerData(type = 'customer', id = this.state.customerId){
+        if(type === 'customer') {
+            const response = await fetch('./customers.json',{
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+            const data = await response.json();
+            const customer = data.find(item => item.id === id);
+            this.setState({
+                "customer": customer,
+                "customerList": data,
+                "customerNavList": data
+                });
+
+        } else if(type === 'user') {
+            const response = await fetch('./users.json',{
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+            const data = await response.json();
+            const user = data.find(item => item.id === id);
+            this.setState({
+                "user": user,
+                "userList": data,
+                "userNavList": data
+                });
+        }
      }
 
-     componentDidUpdate() {
-         this.getCustomerData();
+     componentDidUpdate(prevProps, prevState) {
+        if(prevState.customerId !== this.state.customerId) { 
+            this.getCustomerData('customer', this.state.customerId);
+        }
+        if(prevState.userId !== this.state.userId) { 
+            this.getCustomerData('user', this.state.userId);
+        }
      }
 
     render() {
@@ -63,11 +99,11 @@ class Main extends React.Component {
             mainLeft = '';
             mainRight = <Home />;
         } else if (this.props.view === 'Customers') {
-            mainLeft = <NavList customerList={this.state.customerList} view={view} customerChange={this.changeCustomer} />
+            mainLeft = <NavList customerList={this.state.customerNavList} view={view} customerChange={this.changeCustomer} searchBarChange={this.handleSearch} />
             mainRight = <ContentWindow view={view} customer={this.state.customer} />
         } else if (this.props.view === 'Users') {
-            mainLeft = <NavList userList={this.state.userList} view={view} />
-            mainRight = <ContentWindow view={view} userId={this.userId}/>
+            mainLeft = <NavList userList={this.state.userNavList} view={view} customerChange={this.changeCustomer} searchBarChange={this.handleSearch} />
+            mainRight = <ContentWindow view={view} user={this.state.user}/>
         } else if (this.props.view === 'Records') {
             mainLeft = <NavList view={view} />
             mainRight = <ContentWindow view={view} />
@@ -76,9 +112,7 @@ class Main extends React.Component {
             mainRight = <ContentWindow view={view} />
         }
 
-
         return (
-
             <div className='MainWindow'>
                 {/* MainLeft to display lists of customers / users / reports to select for display in MainRight */}
                 <div className="MainLeft">

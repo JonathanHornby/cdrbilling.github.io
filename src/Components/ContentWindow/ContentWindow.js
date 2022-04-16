@@ -18,7 +18,7 @@ class ContentWindow extends React.Component {
         if(view === 'Customers') {
             display = <CustomerView  customer={this.props.customer} />
         } else if(view === 'Users') {
-            display = <UserView />
+            display = <UserView user={this.props.user} />
         }
 
         return (

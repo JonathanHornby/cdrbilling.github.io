@@ -1,7 +1,8 @@
 .NavList {
   margin: 10px;
   overflow-x: scroll;
-  height: 97%;
+  max-height: 500px;
+  font-size: small;
 }
 
 .NavList ul {
