@@ -1,5 +1,4 @@
 import React from 'react';
-import {useState,useEffect} from 'react';
 import './CustomerView.css';
 import RevenueGraph from '../../RevenueGraph/RevenueGraph';
 
