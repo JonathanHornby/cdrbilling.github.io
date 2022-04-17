@@ -44,13 +44,6 @@ class Navigation extends React.Component {
                         <li title="Reports" id={this.props.selected==="Reports" ? "selected" : "option"} onClick={this.handleViewChange}>
                             <img src={chart} width="30" title="Reports" alt={alt} /> </li>
                         <li><img src={logout} width="30" title="Logout" alt={alt}  onClick={this.handleViewChange}/> </li>
-                        {/*
-                        <li id={this.props.selected==="Customers" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Customers</a></li>
-                        <li id={this.props.selected==="Users" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Users</a></li>
-                        <li id={this.props.selected==="Records" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Records</a></li>
-                        <li id={this.props.selected==="Reports" ? "selected" : "option"}><a href="#" onClick={this.handleViewChange}>Reports</a></li>
-                        <li><a href="#">Logout</a></li>
-                        */}
                     </ul>
             </div>
         )
