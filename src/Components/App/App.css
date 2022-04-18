@@ -9,49 +9,8 @@
   font-size: large;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.Navigation {
-    height: 100%;
-    width: auto;
-    border-right: 1px solid rgb(192, 192, 192);
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-
-.Main {
-  background-color: rgb(255, 255, 255);
-  grid-row-start: 2;
-  grid-row-end: 7;
-  grid-column-start: 2;
-  grid-column-end: 8;
-}
-
 .borderdiv {
   border-bottom: 1px solid rgb(192, 192, 192);
   border-radius: 10px;
   border-style: ridge;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
