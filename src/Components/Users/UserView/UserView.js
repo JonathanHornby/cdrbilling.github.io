@@ -1,6 +1,7 @@
 import React from 'react';
 import RevenueGraph from '../../RevenueGraph/RevenueGraph';
 import './UserView.css';
+import user from '../../Navigation/pictures/user.png';
 
 // UserView
 
@@ -23,12 +24,13 @@ class UserView extends React.Component {
     }
 
     render() {
+        let alt = "People icons created by SBTS2018 - Flaticon";
         return (
             <div className='UserViewDiv'>
                 <div className="UserViewHead">
                     <div className="UserHeadTable borderdiv">
                         <table>
-                            <tr><td>User Name: </td><td>{this.props.user.name}</td></tr>
+                            <tr><td><img src={user} width="25" alt={alt} /><h2>{this.props.user.name}</h2></td></tr>
                             <tr><td>Customer: </td><td>{this.props.user.customer}</td></tr>
                             <tr><td>Total Sim cards:</td><td>{this.props.user.numbersimcards}</td></tr>
                             <tr><td>3 Months ave Revenue:</td><td>${this.props.user.averev}</td></tr>

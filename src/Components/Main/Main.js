@@ -3,6 +3,7 @@ import './Main.css';
 import NavList from '../NavList/NavList';
 import Home from '../Home/Home';
 import ContentWindow from '../ContentWindow/ContentWindow';
+import Util from '../../Util/Util';
 
 // Main component acts as a container for the components which will display tabulated data in the window
 
@@ -19,12 +20,49 @@ class Main extends React.Component {
             userId: "625aa3149b7bd6be98524d11",
             customer: "",
             user: "",
+            recordsData: "",
+            simData: ""
         }
 
         this.changeCustomer = this.changeCustomer.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.getRecordsData = this.getRecordsData.bind(this);
+        this.getCaller = this.getCaller.bind(this);
+        this.getCustomer = this.getCustomer.bind(this);
         this.getCustomerData('customer', this.state.customerId);
         this.getCustomerData('user', this.state.userId);
+        this.getRecordsData();
+        this.getSimData();
+    }
+
+    async getSimData() {
+        const response = await fetch('./sims.json',{
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+        const data = await response.json();
+        this.setState({simData: data});
+    }
+
+    async getRecordsData(type = "all", id = "0") {
+        let sortedData = [];
+        if(type === "customer") {
+            return 1;
+        } else if(type === "user") {
+            return 1;
+        } else if(type === "all") {
+            const response = await fetch('./calls.json',{
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+            const data = await response.json();
+            sortedData = Util.sortByDate(data);
+        }
+        this.setState({recordsData: sortedData})
     }
 
     changeCustomer(e, type = 'Customer') {
@@ -58,10 +96,11 @@ class Main extends React.Component {
             });
             const data = await response.json();
             const customer = data.find(item => item.id === id);
+            const sortedCustomers = Util.sortByName(data);
             this.setState({
                 "customer": customer,
-                "customerList": data,
-                "customerNavList": data
+                "customerList": sortedCustomers,
+                "customerNavList": sortedCustomers
                 });
 
         } else if(type === 'user') {
@@ -73,10 +112,11 @@ class Main extends React.Component {
             });
             const data = await response.json();
             const user = data.find(item => item.id === id);
+            const sortedUsers = Util.sortByName(data);
             this.setState({
                 "user": user,
-                "userList": data,
-                "userNavList": data
+                "userList": sortedUsers,
+                "userNavList": sortedUsers
                 });
         }
      }
@@ -88,6 +128,19 @@ class Main extends React.Component {
         if(prevState.userId !== this.state.userId) { 
             this.getCustomerData('user', this.state.userId);
         }
+     }
+
+     getUser(id) {
+        return this.state.userList.find(user => user.index === id);
+     }
+
+     getCaller(simid) {
+        const userid = this.state.simData.find(sim => sim.index === simid).user;
+        return this.state.userList.find(user => user.index === userid);
+     }
+
+     getCustomer(customerid) {
+        return this.state.customerList.find(customer => customer.index === customerid);
      }
 
     render() {
@@ -106,7 +159,7 @@ class Main extends React.Component {
             mainRight = <ContentWindow view={view} user={this.state.user}/>
         } else if (this.props.view === 'Records') {
             mainLeft = <NavList view={view} />
-            mainRight = <ContentWindow view={view} />
+            mainRight = <ContentWindow view={view} recordsData={this.state.recordsData} getCaller={this.getCaller} getCustomer={this.getCustomer} />
         } else if (this.props.view === 'Reports') {
             mainLeft = <NavList view={view} />
             mainRight = <ContentWindow view={view} />

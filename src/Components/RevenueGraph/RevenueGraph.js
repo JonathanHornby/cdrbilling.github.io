@@ -13,7 +13,10 @@ class RevenueGraph extends React.Component {
 
     render() {
         return(
-            <img className="graphimage" src={graphexample}></img>
+            <div>
+                <img className="graphimage" src={graphexample}></img>
+                <p>This will graph the last 3 months revenue for the Customer or User</p>
+            </div>
         )
 
     }

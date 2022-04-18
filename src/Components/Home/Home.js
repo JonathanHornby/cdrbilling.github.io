@@ -29,7 +29,6 @@ class Home extends React.Component {
                             <li>Javascript</li>
                             <li>React</li>
                             <li>Stateless/Stateful</li>
-                            <li>Rest</li>
                             <li>Async</li>
                             <li>JSX</li>
                             <li>Json</li>
@@ -39,6 +38,9 @@ class Home extends React.Component {
                         </ul>
                     </div>
                     <p>Please browse the Navigation menu on the left</p>
+                    <p>Due to only having a few days to get this done, I have used local json files to store data, rather than using an external database
+                         and implmenting an API. There are also certain features which I couldnt get to complete, but which I have left in place unfinished 
+                         as they are required for context of the application as a whole. EG. Certain links might point to # instead of actually doing something</p>
                 </div>
             </div>
         )

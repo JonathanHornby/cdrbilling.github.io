@@ -1,0 +1,7 @@
+.ReportViewDiv {
+    display: grid;
+    align-items: center; 
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+  }
+  

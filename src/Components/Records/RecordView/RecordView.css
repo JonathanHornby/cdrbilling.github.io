@@ -1,5 +1,4 @@
 .RecordViewDiv {
-    margin: 10px;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 1fr 75%; 
@@ -15,16 +14,20 @@
     margin-right: 10px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
+    max-height: 200px;
   }
   
   .RecordViewDisplay {
     grid-row-start: 2;
     grid-row-end: 2;
+    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     text-align: left;
+    overflow: scroll;
+    max-height: 650px;
   }
   
   .RecordViewp {
@@ -33,4 +36,8 @@
 
   .RecordViewFilter td {
     text-align: left;
+  }
+  
+  #recordViewfilter {
+    text-align: center;
   }
